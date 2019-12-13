@@ -1,3 +1,4 @@
+import '../src/assets/css/global.css'
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'

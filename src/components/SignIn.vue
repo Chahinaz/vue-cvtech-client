@@ -9,7 +9,7 @@
           <div class="field">
             <div class="ui left icon input">
               <i class="user icon"></i>
-              <input type="text" name="email" placeholder="Identifiant ou Adresse mail"/>
+              <input type="text" name="email" placeholder="Identifiant"/>
             </div>
           </div>
 

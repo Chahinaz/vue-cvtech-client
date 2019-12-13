@@ -35,7 +35,7 @@
 
           <div class="ui center checkbox" style="margin: 1.5rem 25% 0 25%">
             <input type="checkbox" name="terms">
-            <label>J'accepte les <a href=""> conditions d'utilisateurs</a>.</label>
+            <label>J'accepte les <a href=""><i><u> conditions d'utilisateurs</u></i></a> .</label>
           </div>
         </div>
 
@@ -46,12 +46,8 @@
   </div>
 </template>
 
-<style>
+<style scoped>
   .signup{
     margin: 7rem 30% 0rem 30%;
-  }
-
-  a{
-    color: #2f2a85;
   }
 </style>
