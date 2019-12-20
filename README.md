@@ -1,4 +1,4 @@
-# cvtech_client
+vuejs_auth_client
 
 ## Project setup
 ```
@@ -22,3 +22,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# vue-cvtech-client
+VueJS client front for the CVTech Application.
