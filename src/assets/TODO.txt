@@ -1,0 +1,49 @@
+      <!-- dropbox of contract type  -->
+      <div class="ui selection dropdown space">
+        <input type="hidden" name="contract">
+        <i class="dropdown icon"></i>
+        <div class="default text">Type de Contrat</div>
+        <div class="menu">
+          <div class="item" data-value="3">Alternance</div>
+          <div class="item" data-value="2">Stage</div>
+          <div class="item" data-value="1">CDI</div>
+          <div class="item" data-value="0">CDD</div>
+        </div>
+      </div>
+
+      <!-- drop down of skills -->
+      <select name="skills" multiple="" class="ui fluid dropdown">
+        <option value="">Compétences</option>
+        <option value="angular">AngularJs</option>
+        <option value="css">CSS</option>
+        <option value="html">HTML</option>
+        <option value="vue">VueJs</option>
+        <option value="java">Java</option>
+      </select>
+
+      <!-- dropbox language  -->
+      <div class="ui selection dropdown space">
+        <input type="hidden" name="langue">
+        <i class="dropdown icon"></i>
+        <div class="default text">Langue</div>
+        <div class="menu">
+          <div class="item" data-value="3">Japonais</div>
+          <div class="item" data-value="2">Russe</div>
+          <div class="item" data-value="1">Allmand</div>
+          <div class="item" data-value="0">Anglais</div>
+        </div>
+      </div>
+
+      <!-- dropbox handicap  -->
+      <div class="ui selection dropdown">
+        <input type="hidden" name="hand">
+        <i class="dropdown icon"></i>
+        <div class="default text">Handicap</div>
+        <div class="menu">
+          <div class="item" data-value="1">Oui</div>
+          <div class="item" data-value="0">Non</div>
+        </div>
+      </div>
+      <div class="ui blue submit button" style="margin: 2rem 0 0 8.5rem">Recherche</div>
+    </div>
+  </div>

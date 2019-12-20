@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="ui top attached tabular menu">
-      <a class="active item" data-tab="profile" :class="{active: 'offer'}" @click="switchTabs('offer')">
-        Offres
-      </a>
       <a class="item" data-tab="profile" :class="{active: 'profile'}" @click="switchTabs('profile')">
         Profiles
+      </a>
+      <a class="active item" data-tab="profile" :class="{active: 'offer'}" @click="switchTabs('offer')">
+        Offres
       </a>
       <div class="right menu">
         <div class="item">
@@ -16,10 +16,10 @@
         </div>
       </div>
     </div>
-    <div class="ui bottom tab segment" data-tab="profile" :class="{active: profile}">
+    <div class="ui bottom tab segment" data-tab="offer" :class="{active: offer}">
       <Offer/>
     </div>
-    <div class="ui bottom tab segment" data-tab="offer" :class="{active: offer}">
+    <div class="ui bottom tab segment" data-tab="profile" :class="{active: profile}">
       <Profile/>
     </div>
   </div>
