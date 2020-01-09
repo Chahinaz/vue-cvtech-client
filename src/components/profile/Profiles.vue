@@ -4,41 +4,26 @@
       <!-- search div -->
       <SearchOpt/>
     </div>
-    <div class="result">
+    <div class="margin">
       <div class="ui internally celled grid">
         <!-- result div -->
         <div class="eight wide divided column">
           <h3 class="ui teal center header">Résultats</h3>
             <!-- profil result example-->
-            <div class="ui link cards">
+            <div class="ui link cards" v-for="profile in profiles" :key="profile">
               <!-- desc -->
-              <div class="ui card">
+              <div class="ui card" id=profile.id>
                 <div class="content">
-                  <div class="center aligned header">Chahinaz Dindane</div>
+                  <div class="center aligned header">{{profile.firstname}} {{profile.lastname}}</div>
                   <div class="center aligned description">
-                    <p>Apprentie développeur au sein du CRI de l'UPEM</p>
-                    <p><i class="file code outline icon"></i>: Java, CSS, HTML, JS, Scala</p>
+                    <p>Apprentie développeuse</p>
+                    <p>{{profile.description}}</p>
+                    <p><i class="file code outline icon"></i>: Java, HTML, CSS, JS (Vue/Nuxt) {{profile.skills}}</p>
                   </div>
                 </div>
                 <div class="extra content">
                   <div class="center aligned author">
-                    <img class="ui avatar image" src="https://react.semantic-ui.com/images/avatar/large/molly.png"> Chahinaz
-                  </div>
-                </div>
-              </div>
-
-              <!-- desc -->
-              <div class="ui card">
-                <div class="content">
-                  <div class="center aligned header">John Doe</div>
-                  <div class="center aligned description">
-                    <p>Développeur PHP, 11 ans d'expériences.</p>
-                    <p><i class="file code outline icon"></i>: PHP, CSS, HTML, JS, Go</p>
-                  </div>
-                </div>
-                <div class="extra content">
-                  <div class="center aligned author">
-                    <img class="ui avatar image" src="https://semantic-ui.com/images/avatar/large/elliot.jpg"> John
+                    <img class="ui avatar image" src="https://react.semantic-ui.com/images/avatar/large/molly.png"> {{profile.img}}
                   </div>
                 </div>
               </div>
@@ -50,25 +35,32 @@
 </template>
 
 <script>
-  import SearchOpt from '../SearchOpt'
-  export default {
-    components: {
-      SearchOpt
+import SearchOpt from '../searchTools/SearchOpt'
+import axios from 'axios'
+
+export default {
+  data() {
+    return {
+      profile: '',
+      profiles: []
     }
+  },
+  mounted() {
+    axios({method: "GET", mode: "cors", "useCredentails": true,"url":"http://localhost:3000/api/profiles"}).then(res => {
+      this.profiles = res.data.rows;
+    }, error => {
+      console.error(error);
+    });
+  },
+  components: {
+    SearchOpt
   }
+}
 </script>
 
-<style>
-  .result{
-    margin-left: 5rem;
-    position: center;
-  }
-
-  .search{
-
-  }
-
-  .profiles{
-
+<style scoped>
+  .margin{
+    margin-left: 80px;
+    margin-top: 1rem;
   }
 </style>

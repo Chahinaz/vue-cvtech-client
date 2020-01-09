@@ -9,10 +9,10 @@
       </a>
       <div class="right menu">
         <div class="item">
-          <div class="ui transparent icon input">
-            <input type="text" placeholder="Search...">
-            <i class="search link icon"/>
-          </div>
+<!--          <div class="ui transparent icon input">-->
+<!--            <input type="text" placeholder="Search...">-->
+<!--            <i class="search link icon"/>-->
+<!--          </div>-->
         </div>
       </div>
     </div>
@@ -53,3 +53,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .segment{
+    margin: 0 !important;
+  }
+</style>
