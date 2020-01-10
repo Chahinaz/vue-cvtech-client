@@ -1,7 +1,2 @@
-// 1 - Set API connection in one file (https://medium.com/canariasjs/vue-api-calls-in-a-smart-way-8d521812c322 => Fix 'Undefined' of .env variables).
+// 1 - Responsive search result (https://www.freecodecamp.org/news/how-to-set-up-responsive-ui-search-in-vue-js-bf6007b7fc0f/) .
 // 2 - Create redirection page for Offers and Profiles (by id).
-// 3 - Adding more data to Offers and Profiles tables (in PSQL database, using Postman).
-// 4 - Responsive search result (https://www.freecodecamp.org/news/how-to-set-up-responsive-ui-search-in-vue-js-bf6007b7fc0f/) .
-
-/** Saved data */
-`${process.env.VUE_APP_URL}/${page}`

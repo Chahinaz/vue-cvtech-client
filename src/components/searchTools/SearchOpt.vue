@@ -1,5 +1,5 @@
 <template>
-  <div class="sticky menu">
+  <div class="ui sticky">
     <h3 class="ui teal center header">Options de recherche</h3>
     <div class="five wide column">
       <!-- search values on sectors -->

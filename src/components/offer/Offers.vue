@@ -6,26 +6,27 @@
     </div>
     <div class="result">
        <!-- result div -->
-      <div class="eight wide divided column">
+      <div class="wide divided column">
         <h3 class="ui teal center header">Résultats</h3>
-          <!-- profil result example-->
-          <div class="ui link cards" v-for="offer in offers" :key="offer">
-            <!-- desc -->
-            <div class="ui card" id=offer.id>
-              <div class="content">
-                <div class="center aligned header">{{offer.sector}}</div>
-                <div class="center aligned description">
-                  <p>{{offer.post}}</p>
-                  <p><i class="file code outline icon"></i>: {{offer.contracttype}} </p>
-                </div>
-              </div>
-              <div class="extra content">
-                <div class="center aligned blue author">
-                  <div class="ui blue horizontal label" href="">En savoir plus</div>
-                </div>
+        <!-- profil result example-->
+        <sui-card-group :items-per-row="4">
+          <!-- desc -->
+          <sui-card v-for="offer in offers" :key="offer" class="ui card" id=offer.id>
+            <sui-card-content>
+              <sui-card-header>{{offer.sector}}</sui-card-header>
+              <sui-card-description>
+                <p>{{offer.post}}</p>
+                <p v-if="offer.contracttype != null"><i class="file code outline icon"></i>: {{offer.contracttype.toString()}} </p>
+                <p v-if="offer.contracttype == null"><i class="file code outline icon"></i>: _ </p>
+              </sui-card-description>
+            </sui-card-content>
+            <div class="extra content">
+              <div class="center aligned blue author">
+                <div class="ui blue horizontal label" href="">En savoir plus</div>
               </div>
             </div>
-          </div>
+          </sui-card>
+        </sui-card-group>
       </div>
     </div>
   </div>
@@ -43,7 +44,7 @@
       }
     },
     mounted() {
-      axios({method: "GET", mode: "cors", "useCredentails": true,"url":"http://localhost:3000/api/offers"}).then(res => {
+      axios({method: "GET", mode: "cors", "useCredentails": true,"url":`${process.env.VUE_APP_DOMAIN_URL}/offers`}).then(res => {
         this.offers = res.data.rows;
       }, error => {
         console.error(error);
