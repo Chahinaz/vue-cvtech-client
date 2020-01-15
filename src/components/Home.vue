@@ -1,10 +1,10 @@
 <template>
-  <div>
+  <div class="home">
     <div class="ui top attached tabular menu">
-      <a class="item" data-tab="profile" :class="{active: 'profile'}" @click="switchTabs('profile')">
+      <a class="ui blue1 item" data-tab="profile" :class="{active: 'profile'}" @click="switchTabs('profile')">
         Profiles
       </a>
-      <a class="active item" data-tab="profile" :class="{active: 'offer'}" @click="switchTabs('offer')">
+      <a class="ui blue1 active item" data-tab="profile" :class="{active: 'offer'}" @click="switchTabs('offer')">
         Offres
       </a>
       <div class="right menu">
@@ -57,5 +57,9 @@ export default {
 <style scoped>
   .segment{
     margin: 0 !important;
+  }
+
+  .home{
+    margin: 7em 7% 7em 7%;
   }
 </style>

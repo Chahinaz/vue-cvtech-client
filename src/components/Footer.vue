@@ -20,7 +20,8 @@
   .footer {
     color: #FFFFFF;
     background-color: #1eafd0 !important;
-    margin-top: 2rem !important;
+    padding: 1em 1.67em 1em 1.67em !important;
+    margin-top: 2em !important;
   }
 
   a{

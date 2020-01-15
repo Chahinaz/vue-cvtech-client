@@ -6,6 +6,7 @@ import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import Offers from './components/offer/Offers'
 import Profiles from './components/profile/Profiles'
+import CGU from './components/CGU'
 import Semantic from 'semantic-ui-css/semantic.min.css'
 import SuiVue from 'semantic-ui-vue'
 import env from 'dotenv';
@@ -23,6 +24,7 @@ const router = new VueRouter({
   base: __dirname,
   routes: [
     { path: '/', name: 'home', component: Home },
+    { path: '/cgu', name: 'cgu', component: CGU },
     { path: '/signin', name: 'signin', component: SignIn },
     { path: '/signup', name: 'signup', component: SignUp },
     { path: '/offers', name: 'offers', component: Offers },

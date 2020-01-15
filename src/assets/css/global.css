@@ -9,8 +9,12 @@ html {
     box-sizing: border-box;
 }
 
-blue {
-    color: #2f2a85 !important;
+.blue1 {
+    color: #55b0d0 !important;
+}
+
+.page{
+    margin: 7rem 30% 7rem 30%;
 }
 
 .result{
@@ -23,4 +27,10 @@ blue {
 /* Important for search options */
 .dropdown{
     margin-right: 1rem ;
+}
+
+
+.inscription, .connection{
+    color: #55b0d0 !important;
+    margin: 0.5em 40% 0.5em 40% !important;
 }

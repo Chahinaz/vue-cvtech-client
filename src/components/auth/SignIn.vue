@@ -1,45 +1,35 @@
 <template>
-  <body>
-  <div class="login">
+  <div class="page">
     <div class="column">
-      <h3 class="ui center aligned header">Connexion à la CV-Tech</h3>
-
-      <form class="ui large form">
+      <h3 class="ui blue center aligned header">Connexion à la CV-Tech</h3>
+      <form class="ui form">
         <div class="ui segment">
           <div class="field">
+            <label>Email</label>
             <div class="ui left icon input">
               <i class="user icon"></i>
               <input type="text" name="email" placeholder="Identifiant"/>
             </div>
           </div>
-
           <div class="field">
+            <label>Mot de passe</label>
             <div class="ui left icon input">
               <i class="lock icon"></i>
               <input type="password" name="password" placeholder="Mot de passe"/>
             </div>
           </div>
-
           <div class="field">
-            <div class="ui checkbox" style="margin: 0.5rem 30% 0 30%">
-              <input type="checkbox" name="example">
-              <label>Rester connecté</label>
-            </div>
+            <sui-checkbox class="stay_in"> Rester connecté </sui-checkbox>
           </div>
         </div>
-
-        <div class="ui blue submit button" style="margin: 1.5rem 30% 0 30%">Connexion</div>
-        <!-- <div class="ui error message"></div>
-           do an error empty field
-        </div> -->
+        <sui-button class="connection">Connexion</sui-button>
       </form>
     </div>
   </div>
-  </body>
 </template>
 
-<style>
-  .login{
-    margin: 7rem 37% 0rem 37%;
+<style scoped>
+  .stay_in{
+    margin: 0.5em 33% .5em 33% !important;
   }
 </style>
