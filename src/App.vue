@@ -1,20 +1,18 @@
 <template>
   <div>
-    <div>
-      <Menu/>
-      <router-view/>
-      <Footer/>
-    </div>
+    <Header/>
+    <router-view/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import Menu from './components/Header.vue'
+import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 
 export default {
   components: {
-    Menu,
+    Header,
     Footer
   }
 }

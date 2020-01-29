@@ -1,5 +1,5 @@
 <template>
-  <div class="profiles">
+  <div class="margin">
     <div class="search">
       <!-- search div -->
       <SearchOpt/>
@@ -22,7 +22,7 @@
                 </sui-card-content>
                 <sui-card-content extra>
                   <div class="center aligned author">
-                    <img class="ui avatar image" src="https://react.semantic-ui.com/images/avatar/large/molly.png"> {{profile.img}}
+                   <img class="ui avatar image" src="https://react.semantic-ui.com/images/avatar/large/molly.png"> <!--  {{profile.img}}-->
                   </div>
                 </sui-card-content>
               </sui-card>
@@ -45,9 +45,10 @@ export default {
     }
   },
   mounted() {
-    axios({method: "GET", mode: "cors", "useCredentails": true,"url":`${process.env.VUE_APP_DOMAIN_URL}/profiles`}).then(res => {
+    axios({method: "GET", mode: "cors", "useCredentails": true,"url":`${process.env.VUE_APP_DOMAIN_URL}/profiles`
+    }).then(res => {
       this.profiles = res.data.rows;
-    }, error => {
+    }).catch(error => {
       console.error(error);
     });
   },

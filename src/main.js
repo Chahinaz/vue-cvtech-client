@@ -19,6 +19,10 @@ Vue.use(VueRouter)
 Vue.use(Semantic)
 Vue.use(SuiVue)
 
+/** Authentication value */
+Vue.prototype.$loggedIn = localStorage.getItem('jwt') !== null && localStorage.getItem('jwt') !== '';
+
+/** Routes */
 const router = new VueRouter({
   mode: 'history',
   base: __dirname,
@@ -27,8 +31,9 @@ const router = new VueRouter({
     { path: '/cgu', name: 'cgu', component: CGU },
     { path: '/signin', name: 'signin', component: SignIn },
     { path: '/signup', name: 'signup', component: SignUp },
-    { path: '/offers', name: 'offers', component: Offers },
-    { path: '/profiles', name: 'profiles', component: Profiles }
+    { path: '/offers', name: 'offers', component: Offers, meta: {requiresAuth: true} },
+    { path: '/profiles', name: 'profiles', component: Profiles, meta: {requiresAuth: true} },
+    // { path: '/profile/:id', data: {id}, component: Profiles.id}
   ]
 })
 
@@ -38,7 +43,8 @@ new Vue({
 }).$mount('#app')
 
 export default axios.create({
-  url: process.env.URL,
+  url: process.env.VUE_APP_DOMAIN_URL,
+  loggedIn: this.$loggedIn,
   /** Tokens */
-  // headers: { "Authorization" : "Bearer ${process.env.token}" }
+  headers: { "Authorization" : `Bearer ${localStorage.getItem('jwt')}` }
 });

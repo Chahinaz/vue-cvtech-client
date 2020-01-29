@@ -1,2 +1,9 @@
-// 1 - Responsive search result (https://www.freecodecamp.org/news/how-to-set-up-responsive-ui-search-in-vue-js-bf6007b7fc0f/) .
-// 2 - Create redirection page for Offers and Profiles (by id).
+// 1 - Add authentication
+    -> SignIn: DONE
+    -> SignUp: DONE
+    -> Issue: - Profiles data doesn't import: DONE
+              - isAuthenticated doesn't work:
+                    - Logout: DONE
+                    - Reload data from DOM: [WIP]
+// 2 - Responsive search result (https://www.freecodecamp.org/news/how-to-set-up-responsive-ui-search-in-vue-js-bf6007b7fc0f/) .
+// 3 - Create redirection page for Offers and Profiles (by id).
